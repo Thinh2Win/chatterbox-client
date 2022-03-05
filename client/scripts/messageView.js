@@ -7,10 +7,18 @@ var MessageView = {
   // TODO: Update this template accordingly.
   render: _.template(`
       <div class="chat">
+<<<<<<< HEAD
         <div class="username">
           <%-username%>
         </div>
         <div class="message">
+=======
+        <div class="username <%= Friends.isFriend(username) ? 'friend' : '' %>"
+        " data-username="<%- username %>">
+          <%- username %>
+        </div>
+        <div id="message">
+>>>>>>> 78cf3cd194a837588147cf26c8355b9e16792879
           <%-text%>
         </div>
       </div>

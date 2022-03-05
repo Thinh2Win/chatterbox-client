@@ -13,6 +13,7 @@ var MessagesView = {
 
   render: function () {
     // TODO: Render _all_ the messages.
+    MessagesView.$chats.empty();
     var messages = '';
     var count = 25;
     for (var i = 0; i < count; i++) {

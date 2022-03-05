@@ -21,12 +21,15 @@ var App = {
 
     // TODO: Make sure the app loads data from the API
     // continually, instead of just once at the start.
+    setInterval(App.fetch, 3000);
   },
 
   fetch: function (callback = () => { }) {
     Parse.readAll((data) => {
       // examine the response from the server request:
       Messages.assign(data);
+      MessagesView.render();
+      Friends.initialize();
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
       callback();
